@@ -1,6 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/social', function(){
+ 
+console.log('mongodb connected');
+ console.log('Ajeet');
+});
 mongoose.connect('localhost:27017/test');
 var Schema = mongoose.Schema;
 
